@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>\{{ msg }}</h1>
+    <comp :msg="msg"></comp>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -20,7 +19,10 @@
 </template>
 
 <script>
+import Comp from './Comp.vue'
+
 export default {
+  components: { Comp },
   name: 'app',
   data () {
     return {
